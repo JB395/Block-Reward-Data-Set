@@ -76,7 +76,8 @@ Works on transactions not in the blockchain or mempool. Tried Testnet with no ne
 ```
 abandontransaction "0cc99a30bc2064041ea4263835b4ed594ff500c56d6b14e4970aeee548e71389"
 
-Transaction not eligible for abandonment (code -5)```
+Transaction not eligible for abandonment (code -5)
+```
 
 **abortrescan**
 
