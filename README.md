@@ -70,7 +70,7 @@ For these console commands, responses are given for default parameters (Qtum ver
 
 Using the command `help <command name>` will give complete information about the command and relevant parameters. The format below shows the command with parameters and the response, in some cases truncated with the term `<snip>`.
 
-**abandontransaction "txid"**
+### abandontransaction "txid"
 
 Works on transactions not in the blockchain or mempool. Tried Testnet with no network connections
 
@@ -81,7 +81,7 @@ Transaction not eligible for abandonment (code -5)
 ```
 
 
-**abortrescan**
+### **abortrescan**
 
 Stops a wallet rescan triggered by a command such as importprivkey. This command can be issued by a 2nd command line window, in which case the command will stop the scan and return “true”.
 
