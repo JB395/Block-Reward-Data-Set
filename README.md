@@ -66,22 +66,23 @@ For these console commands, responses are given for default parameters (Qtum ver
 
 Using the command `help <command name>` will give complete information about the command and relevant parameters. The format below shows the command with parameters and the response, in some cases truncated with the term <snip>.
 
-abandontransaction "txid"
+**abandontransaction "txid"**
 
 Works on transactions not in the blockchain or mempool. Tried Testnet with no network connections
 
-```abandontransaction "0cc99a30bc2064041ea4263835b4ed594ff500c56d6b14e4970aeee548e71389"
+`abandontransaction "0cc99a30bc2064041ea4263835b4ed594ff500c56d6b14e4970aeee548e71389"
 
-Transaction not eligible for abandonment (code -5)```
+Transaction not eligible for abandonment (code -5)`
 
-abortrescan
+**abortrescan**
+
 Stops a wallet rescan triggered by a command such as importprivkey. This command can be issued by a 2nd command line window, in which case the command will stop the scan and return “true”.
 
-qtum-cli abortrescan
+`qtum-cli abortrescan
 
-true
+true`
 
-addmultisigaddress nrequired ["key",...] ( "account" "address_type" )
+**addmultisigaddress nrequired ["key",...] ( "account" "address_type" )**
 
 Add a multisignature address to the wallet so you can receive and send from that address. Run the command on each machine that will be signing and backup the wallet.dat file. The address can be a Qtum address or hex-encoded public key. Use importaddress to add the multisig address on each signing wallet.
 
