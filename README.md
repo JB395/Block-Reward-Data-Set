@@ -13,7 +13,7 @@ QQujfYYrEd3G3bwjZWiBRzyxYwmvK3fyRy,1913101.808,,,
 
 
 
-Commands 1-5-2019
+# Commands 1-5-2019
 The Qtum Core wallet has a rich set of commands which give comprehensive control of the wallet and the blockchain. This manual gives every command and every response; if you want to do anything from basic to complex on the blockchain, these commands will do the job.
 There are two sets of commands that may be used with Qtum Core wallets:
 •	Console commands are given to a wallet that is already running.
@@ -26,7 +26,7 @@ Commands in Linux, Mac OS, Windows 10
 You can always get a list of the current console commands using the help command.
 (photo)
 
-##Console Commands
+## Console Commands
 
 Console commands are given to a running Qtum Core wallet and provide additional information and control. Console commands and are required to operate the qtumd server wallet, which is a “headless” wallet with no graphical user interface.
 
@@ -54,7 +54,7 @@ Raw transactions: crearterawtransaction, signrawtransaction, combinerawtransacto
 Smart contract transactions: createcontract, callcontract, sendtocontract, getaccountinfo, getstorage, searchlogs, waitforlogs
 
  
-##Startup Commands
+## Startup Commands
 
 Startup commands give additional control and recovery options when launching the wallet. For example, you can use startup commands with the qtum-qt desktop GUI wallet for various kinds of blockchain recovery techniques, add additional debug logging or additional controls. The same startup commands work with the qtumd server wallet. If you are going to use these startup commands, make sure you have a good backup of the wallet.dat file.
 
