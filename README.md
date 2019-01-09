@@ -60,16 +60,19 @@ Startup commands give additional control and recovery options when launching the
 
 You can see a complete set of startup commands in the qtum-qt wallet using Help – Command-line options. [reference X]
  
-##Console Commands A - Z
+## Console Commands A - Z
 
 For these console commands, responses are given for default parameters (Qtum version 0.16 – Winter 2018). Commands marked DEPRECATED should not be used because they will be removed and replaced in future versions of the Core wallet, for example, commands using “account” will be removed in version 0.18.
 
 Using the command `help <command name>` will give complete information about the command and relevant parameters. The format below shows the command with parameters and the response, in some cases truncated with the term <snip>.
 
 abandontransaction "txid"
+
 Works on transactions not in the blockchain or mempool. Tried Testnet with no network connections
-abandontransaction "0cc99a30bc2064041ea4263835b4ed594ff500c56d6b14e4970aeee548e71389"
-Transaction not eligible for abandonment (code -5)
+
+```abandontransaction "0cc99a30bc2064041ea4263835b4ed594ff500c56d6b14e4970aeee548e71389"
+
+Transaction not eligible for abandonment (code -5)```
 
 abortrescan
 Stops a wallet rescan triggered by a command such as importprivkey. This command can be issued by a 2nd command line window, in which case the command will stop the scan and return “true”.
