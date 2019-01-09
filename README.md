@@ -290,12 +290,14 @@ dumpwallet "C:\Users\<username>\Desktop\Backups\dump 2018-10-30.txt"
 }
 
 File:
+```
 # Wallet dump created by Qtum v0.16.1.0-0806c12c4-dirty
 # * Created on 2018-10-31T01:56:32Z
 # * Best block at time of backup was 241161 (b11d5169d66d39cbcd848e2ea3f9adfcee1c22af945f100aec9e762d88609e2e),
 #   mined on 2018-10-31T01:55:28Z
 
 # extended private masterkey: <snip>
+```
 
 On Mac:
 
@@ -308,6 +310,7 @@ dumpwallet /Users/<USERNAME>/Desktop/dump_2018-12-15.txt
 }
 
 File:
+```
 # Wallet dump created by Qtum v0.16.2.0-47a30461d-dirty
 # * Created on 2018-12-16T02:22:59Z
 # * Best block at time of backup was 148510 
@@ -330,7 +333,7 @@ KHbx9Qtx58fc
 #   mined on 2018-05-06T02:45:52Z
 
 # extended private masterkey: <snip>
-
+```
 
 encryptwallet "passphrase"
 
