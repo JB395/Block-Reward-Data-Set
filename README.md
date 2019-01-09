@@ -15,9 +15,12 @@ QQujfYYrEd3G3bwjZWiBRzyxYwmvK3fyRy,1913101.808,,,
 
 # Commands 1-5-2019
 The Qtum Core wallet has a rich set of commands which give comprehensive control of the wallet and the blockchain. This manual gives every command and every response; if you want to do anything from basic to complex on the blockchain, these commands will do the job.
+
 There are two sets of commands that may be used with Qtum Core wallets:
-•	Console commands are given to a wallet that is already running.
-•	Startup commands are used when starting up a wallet.
+
+* Console commands are given to a wallet that is already running.
+* Startup commands are used when starting up a wallet.
+
 This manual focuses on the console commands which are given to a wallet that is running and can be sent using RPC (Remote Procedure Calls) to the qtumd server wallet or given to the qtum-qt desktop GUI (Graphical User Interface) wallet using the Debug window Console command line:
  
 For the server wallet qtumd, console commands are given using the Command Line Interface application qtum-cli on the system command line prompt [comment about path]:
@@ -70,9 +73,10 @@ Using the command `help <command name>` will give complete information about the
 
 Works on transactions not in the blockchain or mempool. Tried Testnet with no network connections
 
-`abandontransaction "0cc99a30bc2064041ea4263835b4ed594ff500c56d6b14e4970aeee548e71389"
+```
+abandontransaction "0cc99a30bc2064041ea4263835b4ed594ff500c56d6b14e4970aeee548e71389"
 
-Transaction not eligible for abandonment (code -5)`
+Transaction not eligible for abandonment (code -5)```
 
 **abortrescan**
 
