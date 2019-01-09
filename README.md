@@ -14,7 +14,7 @@ QQujfYYrEd3G3bwjZWiBRzyxYwmvK3fyRy,1913101.808,,,
 
 
 # Commands 1-5-2019
-The Qtum Core wallet has a rich set of commands which give comprehensive control of the wallet and the blockchain. This manual gives every command and every response; if you want to do anything from basic to complex on the blockchain, these commands will do the job.
+The Qtum Core wallet has a rich set of commands which give **comprehensive control of the wallet and the blockchain**. This manual gives every command and every response; if you want to do anything from basic to complex on the blockchain, these commands will do the job.
 
 There are two sets of commands that may be used with Qtum Core wallets:
 
@@ -24,9 +24,12 @@ There are two sets of commands that may be used with Qtum Core wallets:
 This manual focuses on the console commands which are given to a wallet that is running and can be sent using RPC (Remote Procedure Calls) to the qtumd server wallet or given to the qtum-qt desktop GUI (Graphical User Interface) wallet using the Debug window Console command line:
  
 For the server wallet qtumd, console commands are given using the Command Line Interface application qtum-cli on the system command line prompt [comment about path]:
+
 (photo)
+
 Commands in Linux, Mac OS, Windows 10
 You can always get a list of the current console commands using the help command.
+
 (photo)
 
 ## Console Commands :hammer_and_wrench: :hammer_and_wrench: :hammer_and_wrench: :hammer_and_wrench: :hammer_and_wrench:
@@ -34,7 +37,8 @@ You can always get a list of the current console commands using the help command
 Console commands are given to a running Qtum Core wallet and provide additional information and control. Console commands and are required to operate the qtumd server wallet, which is a “headless” wallet with no graphical user interface.
 
 There are 125 console commands with some good references for the 112 inherited from bitcoin. There are 13 “hidden” commands that are used by developers and won’t show up in the “help” list.
-These commands can have required or optional parameters and more numerous parameters are entered in JSON (JavaScript Object Notation) format with escaped double quotes ( \” ) as shown below.
+
+These commands can have required or optional parameters and more numerous parameters are entered in **JSON** (JavaScript Object Notation) format with escaped double quotes ( \” ) as shown below.
 
 Common parameters for these commands are Qtum addresses, block hashes, contract addresses, etc. Some of the commands will have an optional parameter “minconf” (mini confirmation) which allows you to get a response only for a transaction or block that has had that number of confirmations.
 
@@ -42,19 +46,16 @@ A quick comment on “accounts”. Accounts was an ill-fated way from bitcoin to
 
 The chain query bitcoin API reference http://chainquery.com/bitcoin-api explains the parameters and gives examples with responses. The bitcoin chain query API reverence gives 67 commands, of which 2 are not in Qtum (estimatepriority, getgenerate) and two (gettransaction, walletpassphrase) have an additional parameter.
 (https://bitcoin.org/en/developer-reference#remote-procedure-calls-rpcs 
+
 Advanced interfaces to the Qtum Core wallet (full node) can use these “console commands” as RPCs (Remote Procedure Calls) over a dedicated port connection to the node. [are RPC commands the same?] If you are building an exchange hot wallet or server node for a mobile DAPP (Distributed Application) you can use RPCs, which follow these same console commands. (The client offers an JSON-RPC interface over HTTP over sockets to perform various operational functions and to manage the local wallet.)
 
 Here are some command groupings that are useful for various tasks.
 
-Peer connections: getconnectioncount, getpeerinfo, addnodes, getnetworkinfo
-
-Staking: getstakinginfo, getwalletinfo, getnetworkinfo
-
-Sending: listaddressgroupings, sendtoaddress, sendmany, sendmanywithdupes
-
-Raw transactions: crearterawtransaction, signrawtransaction, combinerawtransactoins, sendrawtransaction.
-
-Smart contract transactions: createcontract, callcontract, sendtocontract, getaccountinfo, getstorage, searchlogs, waitforlogs
+* Peer connections: getconnectioncount, getpeerinfo, addnodes, getnetworkinfo
+* Staking: getstakinginfo, getwalletinfo, getnetworkinfo
+* Sending: listaddressgroupings, sendtoaddress, sendmany, sendmanywithdupes
+* Raw transactions: crearterawtransaction, signrawtransaction, combinerawtransactoins, sendrawtransaction.
+* Smart contract transactions: createcontract, callcontract, sendtocontract, getaccountinfo, getstorage, searchlogs, waitforlogs
 
  
 ## Startup Commands
