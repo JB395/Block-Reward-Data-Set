@@ -40,7 +40,7 @@ There are 125 console commands with some good references for the 112 inherited f
 
 These commands can have required or optional parameters and more numerous parameters are entered in **JSON** (JavaScript Object Notation) format with escaped double quotes ( \” ) as shown below.
 
-Common parameters for these commands are Qtum addresses, block hashes, contract addresses, etc. Some of the commands will have an optional parameter “minconf” (mini confirmation) which allows you to get a response only for a transaction or block that has had that number of confirmations.
+Common parameters for these commands are Qtum addresses, block hashes, contract addresses, etc. Some of the commands will have an optional parameter “minconf” (minimun number of confirmations) which allows you to get a response only for a transaction or block that has had that number of confirmations.
 
 A quick comment on “accounts”. Accounts was an ill-fated way from bitcoin to track balances for what are really UTXO transaction-based values, and “accounts” are deprecated and will be phased out by version 0.17.
 
