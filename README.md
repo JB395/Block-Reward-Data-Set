@@ -79,13 +79,17 @@ abandontransaction "0cc99a30bc2064041ea4263835b4ed594ff500c56d6b14e4970aeee548e7
 Transaction not eligible for abandonment (code -5)
 ```
 
+
 **abortrescan**
 
 Stops a wallet rescan triggered by a command such as importprivkey. This command can be issued by a 2nd command line window, in which case the command will stop the scan and return “true”.
 
-`qtum-cli abortrescan
+```
+qtum-cli abortrescan
 
-true`
+true
+```
+
 
 **addmultisigaddress nrequired ["key",...] ( "account" "address_type" )**
 
@@ -98,32 +102,38 @@ Use of account is DEPRECATED).
 See also validateaddress.
 XXXXX how to send?
 
+```
 addmultisigaddress 2 "[\"QgdaD9b3ppKowoC45EZMtepjjBfnvEe6m\",\"QFmr8vY29reHj73XSHfdWvkV3mD57Kqd8\"]"
 
 {
   "address": "mHB9w64hHbm2YtCxyqS8kG3g77b2gbSvK",
   "redeemScript": "5321538ef45ab52bd53508adfda3cfe82ebcaf0495963729e5ff2a8e5aeecdd4cdd23daea03cf4394ad4c578caff2d297ce937c3afba5bc56f31c786b2addf56c72ab"
 }
+```
 
 
-addnode "node" "add|remove|onetry"
+**addnode "node" "add|remove|onetry"**
 
 Adds a node with a known IP address.
 
+```
 addnode 35.200.159.68:3888 add
+```
 
 (qtum-qt will return “null”)
 
 
-addwitnessaddress "address" ( p2sh )
+**addwitnessaddress "address" ( p2sh )**
 
 Hidden command. DEPRECATED. This command was a way to generate a SegWit address from an existing legacy address, usually a P2SH-P2WPKH addresses - Pay-to-Witness-Public-Key-Hash (P2WPKH) script embedded in a Pay-to-Script-Hash (P2SH) address. This command is mostly disabled in version 0.16 and will be removed in version 0.17. Instead, use the getnewaddress command with address type p2sh-segwit or bech32.
 
 Launch v 0.16 qtumd with -deprecatedrpc=addwitnessaddress to run the command:
 
+```
 addwitnessaddress QkSc3wcAJ59Nk4X9mvd258ycVxJ7XWhp9
 
 MHa57hGwD48SZQjh23MZbq24tFwTu7Q3c
+```
 
 
 backupwallet "destination"
