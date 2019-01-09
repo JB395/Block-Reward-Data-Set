@@ -68,7 +68,7 @@ You can see a complete set of startup commands in the qtum-qt wallet using Help 
 
 For these console commands, responses are given for default parameters (Qtum version 0.16 – Winter 2018). Commands marked DEPRECATED should not be used because they will be removed and replaced in future versions of the Core wallet, for example, commands using “account” will be removed in version 0.18.
 
-Using the command `help <command name>` will give complete information about the command and relevant parameters. The format below shows the command with parameters and the response, in some cases truncated with the term <snip>.
+Using the command `help <command name>` will give complete information about the command and relevant parameters. The format below shows the command with parameters and the response, in some cases truncated with the term `<snip>`.
 
 **abandontransaction "txid"**
 
