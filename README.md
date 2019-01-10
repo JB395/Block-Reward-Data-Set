@@ -12,42 +12,34 @@ QcTBUCAbHPqVL7M72QqDQV6Vb6pe64S9cx,1026587.006,,,
 QQujfYYrEd3G3bwjZWiBRzyxYwmvK3fyRy,1913101.808,,,
 
 
-
-# Commands 1-5-2019
-The Qtum Core wallet has a rich set of commands which give **comprehensive control of the wallet and the blockchain**. This manual gives every command and every response; if you want to do anything from basic to complex on the blockchain, these commands will do the job.
-
+# Commands 1-7-2019
+The Qtum Core wallet has a rich set of commands which give comprehensive control of the wallet and the blockchain. This manual gives every command and every response; if you want to do anything from basic to complex on the blockchain, these commands will do the job.
 There are two sets of commands that may be used with Qtum Core wallets:
-
 * Console commands are given to a wallet that is already running.
 * Startup commands are used when starting up a wallet.
-
 This manual focuses on the console commands which are given to a wallet that is running and can be sent using RPC (Remote Procedure Calls) to the qtumd server wallet or given to the qtum-qt desktop GUI (Graphical User Interface) wallet using the Debug window Console command line:
  
 For the server wallet qtumd, console commands are given using the Command Line Interface application qtum-cli on the system command line prompt [comment about path]:
-
 (photo)
-
 Commands in Linux, Mac OS, Windows 10
 You can always get a list of the current console commands using the help command.
-
 (photo)
 
-## Console Commands :hammer_and_wrench: :hammer_and_wrench: :hammer_and_wrench: :hammer_and_wrench: :hammer_and_wrench:
+## Console Commands :hammer_and_wrench:
 
 Console commands are given to a running Qtum Core wallet and provide additional information and control. Console commands and are required to operate the qtumd server wallet, which is a “headless” wallet with no graphical user interface.
 
 There are 125 console commands with some good references for the 112 inherited from bitcoin. There are 13 “hidden” commands that are used by developers and won’t show up in the “help” list.
+These commands can have required or optional parameters and more numerous parameters are entered in JSON (JavaScript Object Notation) format with escaped double quotes ( \” ) as shown below.
 
-These commands can have required or optional parameters and more numerous parameters are entered in **JSON** (JavaScript Object Notation) format with escaped double quotes ( \” ) as shown below.
-
-Common parameters for these commands are Qtum addresses, block hashes, contract addresses, etc. Some of the commands will have an optional parameter “minconf” (minimun number of confirmations) which allows you to get a response only for a transaction or block that has had that number of confirmations.
+Common parameters for these commands are Qtum addresses, block hashes, contract addresses, etc. Some of the commands will have an optional parameter “minconf” (minimum confirmations) which allows you to get a response only for a transaction or block that have at least that number of confirmations.
 
 A quick comment on “accounts”. Accounts was an ill-fated way from bitcoin to track balances for what are really UTXO transaction-based values, and “accounts” are deprecated and will be phased out by version 0.17.
 
-The chain query bitcoin API reference http://chainquery.com/bitcoin-api explains the parameters and gives examples with responses. The bitcoin chain query API reverence gives 67 commands, of which 2 are not in Qtum (estimatepriority, getgenerate) and two (gettransaction, walletpassphrase) have an additional parameter.
+The chain query bitcoin API reference http://chainquery.com/bitcoin-api explains the parameters and gives examples with responses. The bitcoin chain query API reverence gives 67 commands, of which 2 are not in Qtum (estimatepriority, getgenerate) and two (gettransaction, walletpassphrase) have an additional parameter for Qtum.
 (https://bitcoin.org/en/developer-reference#remote-procedure-calls-rpcs 
-
 Advanced interfaces to the Qtum Core wallet (full node) can use these “console commands” as RPCs (Remote Procedure Calls) over a dedicated port connection to the node. [are RPC commands the same?] If you are building an exchange hot wallet or server node for a mobile DAPP (Distributed Application) you can use RPCs, which follow these same console commands. (The client offers an JSON-RPC interface over HTTP over sockets to perform various operational functions and to manage the local wallet.)
+
 
 Here are some command groupings that are useful for various tasks.
 
@@ -60,15 +52,24 @@ Here are some command groupings that are useful for various tasks.
  
 ## Startup Commands
 
-Startup commands give additional control and recovery options when launching the wallet. For example, you can use startup commands with the qtum-qt desktop GUI wallet for various kinds of blockchain recovery techniques, add additional debug logging or additional controls. The same startup commands work with the qtumd server wallet. If you are going to use these startup commands, make sure you have a good backup of the wallet.dat file.
+Startup commands give additional control and recovery options when launching the wallet. For example, you can use startup commands with the qtum-qt desktop GUI wallet for various kinds of blockchain recovery techniques, and additional debug logging or additional controls. The same startup commands work with the qtumd server wallet. If you are going to use these startup commands, make sure you have a good backup of the wallet.dat file.
 
 You can see a complete set of startup commands in the qtum-qt wallet using Help – Command-line options. [reference X]
+
+See the startup commands on the qtum-qt wallet with Help – Startup commands:
+
+(photo)
+
+and on the command line with XXXXX:
+
+(photo)
+
  
 ## Console Commands A - Z
 
-For these console commands, responses are given for default parameters (Qtum version 0.16 – Winter 2018). Commands marked DEPRECATED should not be used because they will be removed and replaced in future versions of the Core wallet, for example, commands using “account” will be removed in version 0.18.
+For these console commands, responses are given for default parameters (Qtum version 0.16 – winter 2018). Commands marked DEPRECATED should not be used because they will be removed and replaced in future versions of the wallet, for example, commands using “account” will be removed in version 0.18.
 
-Using the command `help <command name>` will give complete information about the command and relevant parameters. The format below shows the command with parameters and the response, in some cases truncated with the term `<snip>`.
+Using the command “help <command name>” will give complete information about the command and relevant parameters, formatted in a way you can copy and paste (replacing the addresses, transactions IDs, etc., as required). The format below shows the command with parameters followed by the response, in some cases parameters or responses are truncated with the term <snip>.
 
 ### abandontransaction "txid"
 
@@ -110,7 +111,5 @@ addmultisigaddress 2 "[\"QgdaD9b3ppKowoC45EZMtepjjBfnvEe6m\",\"QFmr8vY29reHj73XS
 }
 ```
 
-
-
-
+### addnode "node" "add|remove|onetry"
 
